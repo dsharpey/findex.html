@@ -254,13 +254,17 @@
             opacity: 0.8;
         }
 
-        @media (max-width: 768px) {
-            section {
-                padding: calc(var(--spacing) * 4rem;
-            }
+        .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;  /* Changed from 2rem to 4rem for more side padding */
+}
 
-            .container {
-                padding: 4rem;
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;  /* Mobile side padding */
+    }
+}
             }
 
             .testimonial-grid,
