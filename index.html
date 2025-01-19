@@ -130,14 +130,17 @@
             opacity: 0.8;
         }
 
-        /* Qualification Grid */
-        .qualification {
-            background: var(--bg-dark);
-        }
+       .qualification h2 {  /* This is your "Introducing: The Rewire" */
+    font-size: clamp(2.5rem, 5vw, 3.5rem);  /* Bigger main title */
+    margin-bottom: 1rem;  /* Less space before subtitle */
+}
 
-        .qualification h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 4rem;
+.qualification p {  /* This is your "The Complete Guide to Laser Focus" */
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);  /* Larger subtitle */
+    color: var(--accent);  /* Make it stand out */
+    opacity: 0.9;
+    margin-bottom: 4rem;  /* Space before cards */
+}
         }
 
         .disqualification-grid {
@@ -210,8 +213,7 @@
 
 }
         .cta-section {
-            background: var(--bg-dark);
-            padding: var(--spacing) 0;
+    padding-bottom: calc(var(--spacing) * 0.5); /* 
         }
 
         .cta-section h2 {
