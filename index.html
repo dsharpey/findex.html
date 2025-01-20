@@ -259,6 +259,33 @@
             opacity: 0.8;
         }
 
+        /* Centralize and Format the Reassurance Message */
+.reassurance-message {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.reassurance-message p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.reassurance-message:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.reassurance-message .cta-button {
+    margin-top: 1.5rem; /* Add space between text and button */
+}
+
         /* Solution Section */
         .solution {
             background: var(--bg-dark);
@@ -303,6 +330,25 @@
         .solution-card p {
             opacity: 0.8;
         }
+
+        /* Final CTA */
+.final-cta {
+    text-align: center;
+    padding-top: calc(var(--spacing) * 0.5);
+    background: var(--primary);
+}
+
+.final-cta p {
+    margin-bottom: 2rem; /* Adjust this value for more/less space */
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-cta .cta-button {
+    margin-top: 1.5rem; /* Add this line to create a gap between text and button */
+}
 
         /* Modal Styles */
         .modal {
@@ -503,9 +549,12 @@
                     <h4>Practical Implementation</h4>
                     <p>Step-by-step system you can implement today</p>
                 </div>
-            </div>
-        </div>
-    </section>
+            </div> class="final-cta">
+    <div class="container">
+        <p>Don't wait until another day is lost to distractions. Transform your focus today.</p>
+        <button class="cta-button" onclick="openModal()">GET YOUR FREE GUIDE!</button>
+    </div>
+</section>
 
     <!-- Modal Popup -->
     <div class="modal" id="signup-modal">
