@@ -2,31 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Transform Your Focus Today | Matthew's Guide</title>
-    
-    <!-- Meta Tags -->
-    <meta name="description" content="Transform your focus today - before another day is lost to distractions. Get Matthew's complete guide to laser focus.">
-    
-    <!-- Fonts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Focus | Matthew's Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Root Variables */
-        :root {
+        :root { 
             --primary: #1E293B;
             --accent: #3B82F6;
             --text: #F8FAFC;
             --bg-dark: #0F172A;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --card-hover: rgba(255, 255, 255, 0.08);
             --spacing: clamp(3rem, 8vw, 8rem);
-            --container: 1200px;
         }
 
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -40,190 +30,107 @@
             color: var(--text);
         }
 
-        /* Mobile First Base Styles */
         .container {
-            max-width: var(--container);
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
 
         section {
             padding: var(--spacing) 0;
         }
 
-        h1 {
-            font-size: 2.5rem;
+        h1, h2, h3, h4 {
             line-height: 1.2;
-            font-weight: 700;
         }
 
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        /* Tablet Styles */
-        @media (min-width: 768px) {
-            .container {
-                padding: 0 2rem;
-            }
-
-            h1 {
-                font-size: 3.5rem;
-            }
-
-            h2 {
-                font-size: 2.2rem;
-            }
-
-            p {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Desktop Styles */
-        @media (min-width: 1024px) {
-            .container {
-                padding: 0 4rem;
-            }
-
-            h1 {
-                font-size: 4rem;
-            }
-
-            h2 {
-                font-size: 2.5rem;
-            }
-
-            p {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Large Desktop Styles */
-        @media (min-width: 1440px) {
-            .container {
-                padding: 0 6rem;
-            }
-        }
-                /* Hero Section Styles */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             background: var(--bg-dark);
-            text-align: center;
+            padding: calc(var(--spacing) * 1.5) 0;
         }
 
         .hero-content {
-            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .hero h1 {
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
             margin-bottom: 1.5rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            font-weight: 700;
         }
 
         .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            opacity: 0.9;
             margin-bottom: 2.5rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        /* Button Styles */
-        .cta-button {
+        /* Buttons */
+        .cta-button, .skool-button {
             background: var(--accent);
             color: var(--text);
             padding: 1rem 2rem;
             border: none;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .cta-button:hover {
+        .cta-button:hover, .skool-button:hover {
             transform: translateY(-2px);
             background: #2563eb;
         }
 
-        /* Hero Responsive Adjustments */
-        @media (min-width: 768px) {
-            .hero {
-                padding: calc(var(--spacing) * 1.5) 0;
-            }
-
-            .cta-button {
-                font-size: 1.1rem;
-                padding: 1.2rem 2.5rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .cta-button {
-                padding: 1.25rem 3rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transform Your Focus Today - Before Another Day Is Lost to Distractions</h1>
-                <p>Discover the exact system to maintain laser focus, even in a world designed to distract you.</p>
-                <button class="cta-button" onclick="openModal()">GET YOUR FREE GUIDE!</button>
-            </div>
-        </div>
-    </section>
-            /* Social Proof Section */
+        /* Social Proof Section */
         .social-proof {
             background: var(--primary);
+        }
+
+        .proof-content {
             text-align: center;
-            padding-bottom: calc(var(--spacing) * 0.5);
-        }
-
-        .social-proof h2 {
             max-width: 800px;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto;
+            margin-bottom: 4rem;
         }
 
-        .social-proof p {
-            max-width: 700px;
-            margin: 0 auto;
+        .proof-content h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .proof-content p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            opacity: 0.9;
         }
 
         /* Testimonials */
         .testimonial-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            max-width: var(--container);
-            margin: 4rem auto;
-            padding: 0 1.5rem;
+            margin-bottom: 4rem;
+            padding: 0 1rem;
         }
 
         .testimonial-card {
-            background: var(--card-bg);
+            background: rgba(255, 255, 255, 0.05);
             padding: 2rem;
             border-radius: 12px;
-            text-align: left;
             transition: transform 0.3s ease;
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            background: var(--card-hover);
         }
 
         .testimonial-content {
@@ -242,102 +149,59 @@
             opacity: 0.8;
         }
 
-        /* Community CTA */
-        .community-link {
-            display: inline-block;
+                /* Community CTA */
+        .community-cta {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .community-cta h3 {
+            margin-bottom: 1rem;
             color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 2rem;
-            transition: opacity 0.2s ease;
+            font-size: 1.8rem;
         }
 
-        .community-link:hover {
-            opacity: 0.8;
+        .community-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-size: 1.1rem;
         }
 
-        /* Responsive Adjustments */
-        @media (min-width: 768px) {
-            .testimonial-grid {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 0 2rem;
-            }
-
-            .testimonial-card {
-                padding: 2.5rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .testimonial-grid {
-                padding: 0 4rem;
-            }
-        }
-        <!-- Social Proof Section -->
-    <section class="social-proof">
-        <div class="container">
-            <h2>With over 90,000 subscribers on YouTube...</h2>
-            <p>I've helped thousands of students and professionals transform their focus and productivity. But don't just take my word for it...</p>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <div class="testimonial-grid">
-        <div class="testimonial-card">
-            <div class="testimonial-content">
-                <p>"Just got my report card and I'm so happy! Thank you Matthew for all your advice through your YouTube channel and the support from this community. One of my goals has been fulfilled! May God guide us on the right path 🙏"</p>
-            </div>
-            <div class="testimonial-author">
-                <p class="name">Valerie S.</p>
-                <p class="detail">Posted 28 days ago • Wins/Achievements</p>
-            </div>
-        </div>
-
-        <div class="testimonial-card">
-            <div class="testimonial-content">
-                <p>"Just got the best possible grade in science (which isn't my strongest subject). Thanks to studying and productivity tips from SS. In my country grades go from 1-6, where 1 is wack and 6 is the best!"</p>
-            </div>
-            <div class="testimonial-author">
-                <p class="name">August Gullestad</p>
-                <p class="detail">Posted 1 hour ago • Wins/Achievements</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Community Link -->
-    <div class="container" style="text-align: center;">
-        <a href="https://www.skool.com/successful-students-5280/about" class="community-link" target="_blank">
-            See more success stories in our community →
-        </a>
-    </div>
-            /* Qualification Section */
+        /* Qualification Section */
         .qualification {
             background: var(--bg-dark);
+        }
+
+        .qualification h2 {
             text-align: center;
+            margin-bottom: 4rem;
+            font-size: clamp(2rem, 4vw, 2.5rem);
         }
 
         .disqualification-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            max-width: var(--container);
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 1.5rem;
         }
 
         .disqualification-item {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
             display: flex;
             align-items: center;
             gap: 1.5rem;
-            transition: transform 0.3s ease;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: transform 0.2s ease;
         }
 
         .disqualification-item:hover {
             transform: translateY(-5px);
-            background: var(--card-hover);
         }
 
         .x-mark {
@@ -348,73 +212,229 @@
         /* Pain Points Section */
         .pain-points {
             background: var(--primary);
-            text-align: center;
         }
 
         .pain-points-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
-            max-width: var(--container);
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
         }
 
         .pain-point-card {
-            background: var(--card-bg);
+            background: rgba(255, 255, 255, 0.05);
             padding: 2.5rem;
             border-radius: 12px;
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .pain-point-card:hover {
             transform: translateY(-5px);
-            background: var(--card-hover);
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .pain-point-card .icon {
-            font-size: 40px;
+            width: 80px;
+            height: 80px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 1.5rem;
+            font-size: 40px;
         }
 
         .pain-point-card h3 {
-            font-size: 1.3rem;
             margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
-        /* CTA Section */
-        .cta-section {
+        .pain-point-card p {
+            opacity: 0.8;
+        }
+
+        /* Solution Section */
+        .solution {
             background: var(--bg-dark);
+        }
+
+        .solution-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .solution-header h3 {
+            color: var(--accent);
+            margin-top: 0.5rem;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .solution-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
             text-align: center;
         }
 
-        .cta-section h2 {
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
+        .solution-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
         }
 
-        .cta-section p {
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
+        .solution-card h4 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
-        /* Responsive Adjustments */
-        @media (min-width: 768px) {
-            .disqualification-grid,
-            .pain-points-grid {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 0 2rem;
+        .solution-card p {
+            opacity: 0.8;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: var(--primary);
+            padding: 3rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-input {
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+            font-size: 1rem;
+            width: 100%;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 1.8rem;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .close-modal:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .pain-points-grid,
+            .solution-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 2rem;
+            }
+
+            section {
+                padding: calc(var(--spacing) * 0.7) 0;
             }
         }
+    </style>
+</head>
 
-        @media (min-width: 1024px) {
-            .disqualification-grid,
-            .pain-points-grid {
-                grid-template-columns: repeat(3, 1fr);
-                padding: 0 4rem;
-            }
-        }
-        <!-- Qualification Section -->
+    <body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Focus In A World Of Endless Distractions</h1>
+                <p>Discover the exact system to maintain laser focus, even in a world designed to distract you.</p>
+                <button class="cta-button" onclick="openModal()">GET YOUR FREE GUIDE!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof & Testimonials Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-content">
+                <h2>With 100,000 subscribers on YouTube...</h2>
+                <p>I've helped thousands of students and professionals transform their focus and productivity. But don't just take my word for it...</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Just got my report card and I'm so happy! Thank you Matthew for all your advice through your YouTube channel and the support from this community. One of my goals has been fulfilled! May God guide us on the right path 🙏"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <p class="name">Valerie S.</p>
+                        <p class="detail">Posted 28 days ago • Wins/Achievements</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Just got the best possible grade in science (which isn't my strongest subject). Thanks to studying and productivity tips from SS. In my country grades go from 1-6, where 1 is wack and 6 is the best!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <p class="name">August Gullestad</p>
+                        <p class="detail">Posted 1 hour ago • Wins/Achievements</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="community-cta">
+                <h3>Want More? Join Our Community</h3>
+                <p>Get daily focus tips, connect with like-minded students, and access exclusive content in our Skool community.</p>
+                <a href="https://www.skool.com/successful-students-5280/about" class="skool-button" target="_blank">JOIN THE COMMUNITY</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Section -->
     <section class="qualification">
         <div class="container">
             <h2>This Guide Isn't For:</h2>
@@ -455,161 +475,21 @@
                     <h3>Knowing you're capable of more</h3>
                     <p>Bridge the gap between your potential and your current performance</p>
                 </div>
+        <div class="reassurance-message">
+                <p>Don't worry, it's not your fault. Your brain is being hijacked by notifications, social media, and endless distractions.</p>
+                <p>But it's time for The Rewire your brain has been needing...</p>
+                <button class="cta-button" onclick="openModal()">GET STARTED TODAY</button>
             </div>
         </div>
     </section>
 
-    <!-- Not Your Fault CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Look, it's not your fault...</h2>
-            <p>Your brain has been rewired by TikTok, Instagram reels, and endless notifications. But here's the thing - you can take back control. All it takes is 15 minutes to understand how you can rewire your brain for laser focus.</p>
-            <button class="cta-button" onclick="openModal()">GET YOUR FREE GUIDE!</button>
-        </div>
-    </section>
-            /* Solution Section */
-        .solution {
-            background: var(--primary);
-            text-align: center;
-        }
-
-        .solution h2 {
-            margin-bottom: 0.5rem;
-        }
-
-        .solution h3 {
-            color: var(--accent);
-            font-size: 1.3rem;
-            margin-bottom: 4rem;
-        }
-
-        .solution-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: var(--container);
-            margin: 4rem auto 0;
-            padding: 0 1.5rem;
-        }
-
-        .solution-card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-        }
-
-        .solution-card:hover {
-            transform: translateY(-5px);
-            background: var(--card-hover);
-        }
-
-        .solution-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Final CTA */
-        .final-cta {
-            text-align: center;
-            padding-top: calc(var(--spacing) * 0.5);
-        }
-
-        .final-cta p {
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: var(--primary);
-            padding: 3rem;
-            border-radius: 12px;
-            max-width: 500px;
-            width: 90%;
-            position: relative;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            margin-bottom: 1rem;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            background: var(--card-bg);
-            color: var(--text);
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 1.8rem;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        .close-modal:hover {
-            opacity: 1;
-        }
-
-        .privacy-notice {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            margin-top: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .solution-grid {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 0 2rem;
-            }
-
-            .modal-content {
-                padding: 4rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .solution-grid {
-                grid-template-columns: repeat(3, 1fr);
-                padding: 0 4rem;
-            }
-        }
-    </style>
-</head>
-        <!-- Solution Section -->
+    <!-- Solution Section -->
     <section class="solution">
         <div class="container">
-            <h2>Introducing: The Rewire</h2>
-            <h3>The Complete Guide to Laser Focus</h3>
+            <div class="solution-header">
+                <h2>Introducing: The Rewire</h2>
+                <h3>The Complete Guide to Laser Focus</h3>
+            </div>
             <div class="solution-grid">
                 <div class="solution-card">
                     <h4>Simple Environment Changes</h4>
@@ -627,15 +507,7 @@
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <p>Don't wait until another day is lost to distractions. Transform your focus today.</p>
-            <button class="cta-button" onclick="openModal()">GET YOUR FREE GUIDE!</button>
-        </div>
-    </section>
-
-    <!-- Modal -->
+    <!-- Modal Popup -->
     <div class="modal" id="signup-modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
@@ -686,9 +558,11 @@
         document.getElementById('modal-form').addEventListener('submit', function(e) {
             const button = this.querySelector('button');
             
+            // Add loading state
             button.disabled = true;
             button.innerHTML = 'Sending...';
 
+            // Show success message after form submission
             setTimeout(() => {
                 const modal = document.getElementById('signup-modal');
                 modal.innerHTML = `
@@ -698,6 +572,7 @@
                     </div>
                 `;
                 
+                // Close modal after 3 seconds
                 setTimeout(() => {
                     closeModal();
                 }, 3000);
